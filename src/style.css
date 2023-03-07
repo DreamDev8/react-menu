@@ -1,0 +1,146 @@
+/* VARIABLES */
+
+:root {
+    --clr-blue-light: hsl(205, 90%, 88%);
+    --clr-darker-grey: hsl(210, 22%, 49%);
+    --clr-lighter-grey: hsl(210, 36%, 96%);
+    --clr-gold: #c59d5f;
+    --clr-white: #fff;
+    --clr-black: #222;
+
+    --max-width: 90vw;
+    --side-margin-mobile: 1.875rem;
+}
+
+/* GLOBALS */
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--clr-lighter-grey);
+    line-height: 1.5;
+    letter-spacing: 0.03125rem;
+    font-size: 0.875rem;
+}
+
+main {
+    padding: 5rem 0;
+}
+
+/*heading*/
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+
+.heading-underline {
+    background-color: var(--clr-gold);
+    width: 8rem;
+    height: 0.25rem;
+    margin-top: 0.625rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*btns categories*/
+
+.btn-container {
+    margin: 2rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-container button {
+    background-color: var(--clr-gold);
+    color: var(--clr-white);
+    text-transform: capitalize;
+    font-weight: 200;
+    border-radius: 0.3125rem;
+    border: none;
+    padding: 0.3125rem 0.9375rem;
+}
+
+/*menu*/
+
+.menu-container {
+    width: min(var(--max-width), 100% - var(--side-margin-mobile) * 2);
+    max-width: 73.125rem;
+    margin-inline: auto;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+.menu-item {
+    background-color: var(--clr-white);
+    max-width: 25rem;
+}
+
+.menu-copy {
+    padding: 0 1.5rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.menu-copy p {
+    color: var(--clr-darker-grey);
+    line-height: 2;
+}
+
+.menu-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+.menu-title h4 {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.menu-title h3 {
+    background-color: var(--clr-gold);
+    color: var(--clr-white);
+    font-weight: 200;
+    border-radius: 0.3125rem;
+    padding: 0 0.4375rem;
+}
+
+.menu-img {
+    height: 15rem;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-top-right-radius: 0.3125rem;
+    border-top-left-radius: 0.3125rem;
+
+}
+
+@media screen and (min-width: 70em) {
+    .menu-container {
+        width: 95vw;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
